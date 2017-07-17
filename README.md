@@ -26,7 +26,7 @@ Use the expressivenes of Scala and the Flow Control provided by Akka Streams to 
  
 ### Copyright and License
 
-All code is available to you under the Apache2 license, available at
+All code is available to you under the MIT license, available at
 http://opensource.org/licenses/mit-license.php and also in the
 [LICENSE](LICENSE) file.
 Copyright [Ivan Morozov], 2017.
