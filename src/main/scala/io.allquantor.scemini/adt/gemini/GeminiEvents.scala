@@ -9,15 +9,15 @@
   */
 
 
-package io.allquantor.orders.adt.gemini
+package io.allquantor.scemini.adt.gemini
 
-import io.allquantor.orders.adt.MarketEvent
-import io.allquantor.orders.adt.gemini.GeminiConstants.CurrencyPairs.CurrencyPair
-import io.allquantor.orders.adt.gemini.GeminiConstants.GeminiAuctionResults.GeminiAuctionResult
-import io.allquantor.orders.adt.gemini.GeminiConstants.GeminiEventReasons.GeminiEventReason
-import io.allquantor.orders.adt.gemini.GeminiConstants.GeminiEventTypes
-import io.allquantor.orders.adt.gemini.GeminiConstants.GeminiEventTypes.GeminiEventType
-import io.allquantor.orders.adt.gemini.GeminiConstants.GeminiSides.GeminiSide
+import io.allquantor.scemini.adt.MarketEvent
+import io.allquantor.scemini.adt.gemini.GeminiConstants.CurrencyPairs.CurrencyPair
+import io.allquantor.scemini.adt.gemini.GeminiConstants.GeminiAuctionResults.GeminiAuctionResult
+import io.allquantor.scemini.adt.gemini.GeminiConstants.GeminiEventReasons.GeminiEventReason
+import io.allquantor.scemini.adt.gemini.GeminiConstants.GeminiEventTypes
+import io.allquantor.scemini.adt.gemini.GeminiConstants.GeminiEventTypes.GeminiEventType
+import io.allquantor.scemini.adt.gemini.GeminiConstants.GeminiSides.GeminiSide
 
 
 object GeminiEvents {

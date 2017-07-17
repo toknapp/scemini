@@ -1,7 +1,6 @@
 package io.allquantor.scemini.materialization
 
-import io.allquantor.orders.adt.gemini.GeminiEvents.GeminiEvent
-import io.allquantor.orders.materialization.GeminiMarketReads
+import io.allquantor.scemini.adt.gemini.GeminiEvents.GeminiEvent
 import io.circe.parser._
 import org.scalatest.{Matchers, WordSpec}
 

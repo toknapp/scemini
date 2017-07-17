@@ -1,3 +1,3 @@
-package io.allquantor.orders.adt
+package io.allquantor.scemini.adt
 
 trait MarketEvent

@@ -5,10 +5,10 @@ import akka.http.scaladsl.Http
 import akka.http.scaladsl.model.ws.{Message, _}
 import akka.stream._
 import akka.stream.scaladsl._
-import io.allquantor.orders.adt.gemini.GeminiConstants.CurrencyPairs.CurrencyPair
-import io.allquantor.orders.adt.gemini.GeminiEvents.GeminiEvent
-import io.allquantor.orders.materialization.GeminiMarketReads
+import io.allquantor.scemini.adt.gemini.GeminiConstants.CurrencyPairs.CurrencyPair
+import io.allquantor.scemini.adt.gemini.GeminiEvents.GeminiEvent
 import io.allquantor.scemini.client.ExchangePlatformClient
+import io.allquantor.scemini.materialization.GeminiMarketReads
 import io.circe.parser._
 
 import scala.concurrent.Future
@@ -34,7 +34,7 @@ class GeminiMarkets(currencyPairs: Seq[CurrencyPair],
     Flow[(Message, CurrencyPair)].collect {
       case (elem@(m: Message, c: CurrencyPair)) =>
         implicit val currencyPair: CurrencyPair = c
-        (m: @unchecked) match  {
+        (m: @unchecked) match {
           case TextMessage.Strict(msg) => Future(msg.transform)
           case TextMessage.Streamed(stream) => stream.limit(100)
             .completionTimeout(5000.millis)

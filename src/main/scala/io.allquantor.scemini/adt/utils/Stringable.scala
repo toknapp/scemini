@@ -1,4 +1,4 @@
-package io.allquantor.orders.adt.utils
+package io.allquantor.scemini.adt.utils
 
 trait Stringable {
 

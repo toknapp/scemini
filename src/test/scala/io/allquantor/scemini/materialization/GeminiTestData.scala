@@ -1,7 +1,7 @@
 package io.allquantor.scemini.materialization
 
-import io.allquantor.orders.adt.gemini.GeminiConstants.{GeminiAuctionResults, GeminiEventReasons, GeminiSides}
-import io.allquantor.orders.adt.gemini.GeminiEvents._
+import io.allquantor.scemini.adt.gemini.GeminiEvents._
+import io.allquantor.scemini.adt.gemini.GeminiConstants.{GeminiAuctionResults, GeminiSides, GeminiEventReasons}
 
 trait GeminiTestData {
 

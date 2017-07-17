@@ -1,18 +1,16 @@
 
 /**
+  *
   * Gemini Data Model of Public Market Data
   * https://docs.gemini.com/websocket-api/#market-data
   *
   * @author Ivan Morozov (allquantor)
   *
-  *
   */
 
+package io.allquantor.scemini.adt.gemini
 
-package io.allquantor.orders.adt.gemini
-
-import io.allquantor.orders.adt.utils.Stringable
-
+import io.allquantor.scemini.adt.utils.Stringable
 
 object GeminiConstants {
 

@@ -1,9 +1,15 @@
+/**
+  *
+  * @author Ivan Morozov (allquantor)
+  *
+  */
+
 package io.allquantor.scemini.client
 
 import akka.actor.ActorSystem
 import akka.stream.{ActorMaterializer, Materializer}
-import io.allquantor.orders.adt.gemini.GeminiConstants.CurrencyPairs
-import io.allquantor.orders.adt.gemini.GeminiConstants.CurrencyPairs.CurrencyPair
+import io.allquantor.scemini.adt.gemini.GeminiConstants.CurrencyPairs
+import io.allquantor.scemini.adt.gemini.GeminiConstants.CurrencyPairs.CurrencyPair
 import io.allquantor.scemini.client.gemini.GeminiMarkets
 
 import scala.concurrent.ExecutionContext

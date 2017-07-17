@@ -1,5 +1,4 @@
 
-
 /**
   * Gemini Data Model - JsonRead of Public Market Data
   * https://docs.gemini.com/websocket-api/#market-data
@@ -9,12 +8,12 @@
   *
   */
 
-package io.allquantor.orders.materialization
+package io.allquantor.scemini.materialization
 
-import io.allquantor.orders.adt.gemini.GeminiConstants.{GeminiAuctionResults, GeminiEventReasons, GeminiEventTypes, GeminiSides}
-import io.allquantor.orders.adt.gemini.GeminiEvents._
-import io.allquantor.orders.adt.utils.Stringable
+import io.allquantor.scemini.adt.gemini.GeminiEvents._
+import io.allquantor.scemini.adt.gemini.GeminiConstants.{GeminiEventReasons, GeminiAuctionResults, GeminiSides, GeminiEventTypes}
 import io.circe.{ACursor, Decoder, DecodingFailure, HCursor}
+import io.allquantor.scemini.adt.utils.Stringable
 
 
 trait GeminiMarketReads {
