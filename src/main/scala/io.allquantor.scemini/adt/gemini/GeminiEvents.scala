@@ -23,7 +23,7 @@ import io.allquantor.scemini.adt.gemini.GeminiConstants.GeminiSides.GeminiSide
 object GeminiEvents {
 
   case class GeminiEvent(eventId: Long, events: Seq[GeminiEventDelta],
-                         currencyPair : Option[CurrencyPair] = None
+                         currencyPair: Option[CurrencyPair] = None
                         ) extends MarketEvent
 
   sealed trait GeminiEventDelta {

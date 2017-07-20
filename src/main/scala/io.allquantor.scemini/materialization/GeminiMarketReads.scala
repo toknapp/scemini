@@ -36,7 +36,7 @@ trait GeminiMarketReads {
       case GeminiEventTypes.auction_open => auctionOpenRead
       case GeminiEventTypes.auction_indicative => auctionIndicativeRead
       case GeminiEventTypes.auction_result => auctionResultRead
-      case _ => Decoder.failedWithMessage("Event type is unknown, json could not be decoded").apply(c)
+      case _ => Decoder.failedWithMessage("Event type is unknown, JSON could not be decoded")(c)
     }
   }
 

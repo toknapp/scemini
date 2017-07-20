@@ -6,6 +6,8 @@
 
 package io.allquantor.scemini.client
 
+import java.util.concurrent.Executors
+
 import akka.actor.ActorSystem
 import akka.stream.{ActorMaterializer, Materializer}
 import io.allquantor.scemini.adt.gemini.GeminiConstants.CurrencyPairs
@@ -20,6 +22,7 @@ abstract class ExchangePlatformClient(implicit system: ActorSystem) {
   protected[this] implicit val actorSystem: ActorSystem = system
   protected[this] implicit val ec: ExecutionContext = actorSystem.dispatcher
   protected[this] implicit val mat: Materializer =  ActorMaterializer.create(system)
+  protected [this] val CPUec = ExchangePlatformClient.CPUec
 }
 
 object ExchangePlatformClient extends ClientConfig.GeminiConfig {
@@ -33,6 +36,8 @@ object ExchangePlatformClient extends ClientConfig.GeminiConfig {
   def asGeminiClient(currencyPairs: Seq[CurrencyPair] = defaultCurrencyPairs)(implicit actorSystem: ActorSystem): GeminiMarkets = {
     this.apply(currencyPairs)
   }
+
+  val CPUec = ExecutionContext.fromExecutor(Executors.newFixedThreadPool(2))
 }
 
 

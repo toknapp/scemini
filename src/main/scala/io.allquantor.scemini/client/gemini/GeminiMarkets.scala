@@ -35,10 +35,10 @@ class GeminiMarkets(currencyPairs: Seq[CurrencyPair],
       case (elem@(m: Message, c: CurrencyPair)) =>
         implicit val currencyPair: CurrencyPair = c
         (m: @unchecked) match {
-          case TextMessage.Strict(msg) => Future(msg.transform)
+          case TextMessage.Strict(msg) => Future(msg.transform)(CPUec)
           case TextMessage.Streamed(stream) => stream.limit(100)
             .completionTimeout(5000.millis)
-            .runFold("")(_ + _).map(_.transform)
+            .runFold("")(_ + _).map(_.transform)(CPUec)
         }
     }.mapAsync(4)(identity)
   }
